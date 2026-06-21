@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>For Papa Ji ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+text-align:center;
+}
+
+.page{
+display:none;
+min-height:100vh;
+padding:40px 20px;
+box-sizing:border-box;
+}
+
+.active{
+display:block;
+}
+
+.card{
+max-width:800px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+h1{
+color:#e91e63;
+}
+
+p{
+font-size:22px;
+line-height:1.8;
+}
+
+button{
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#e91e63;
+color:white;
+margin-top:20px;
+}
+
+input{
+padding:12px;
+width:250px;
+font-size:18px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+audio{
+width:90%;
+max-width:400px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+<div class="card">
+
+<h1>Welcome Papa Ji ❤️</h1>
+
+<p>Please Enter Password</p>
+
+<input type="password" id="pass">
+
+<br>
+
+<button onclick="unlock()">
+
+Unlock
+
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+<div class="card">
+
+<h1>Dear Papa Ji ❤️</h1>
+
+<p>
+
+Khushi Ji aapko kabhi hurt nahi karna chahti.
+
+Woh aapke har decision ki respect karti hai.
+
+Aapki khushi hi uski asli khushi hai.
+
+<br><br>
+
+Aap uske liye sirf Papa nahi,
+
+uski himmat,
+
+uski taqat,
+
+aur uski poori duniya hain.
+
+</p>
+
+<button onclick="showPage(3)">
+
+Next
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+<div class="card">
+
+<h1>Song For Papa Ji 🎵</h1>
+
+<p>
+
+Yeh geet dil se aapke naam.
+
+</p>
+
+<audio controls>
+
+<source src="song.mp3" type="audio/mpeg">
+
+</audio>
+
+<br>
+
+<button onclick="showPage(4)">
+
+Next
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+<div class="card">
+
+<h1>Respect ❤️</h1>
+
+<p>
+
+Papa Ji,
+
+Duniya mein bahut log milte hain,
+
+lekin Papa ka pyaar sabse alag hota hai.
+
+<br><br>
+
+Khushi Ji ko garv hai
+
+ki uske paas aap jaise Papa hain.
+
+Aapki har seekh
+
+uski zindagi ka sabse bada khazana hai.
+
+</p>
+
+<button onclick="showPage(5)">
+
+Next
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+<div class="card">
+
+<h1>Special Message ❤️</h1>
+
+<p>
+
+Aapki ek muskaan,
+
+Khushi Ji ke liye poori duniya se zyada keemti hai.
+
+<br><br>
+
+Woh chahti hai ki
+
+aap hamesha khush rahein,
+
+kyunki aapki khushi mein hi
+
+uski khushi basti hai.
+
+</p>
+
+<button onclick="showPage(6)">
+
+Next
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 6 -->
+
+<div class="page" id="page6">
+
+<div class="card">
+
+<h1>Best Papa In The World ❤️</h1>
+
+<p>
+
+Bas itna hi kehna hai Papa Ji...
+
+<br><br>
+
+Khushi Ji aapse bahut pyaar aur respect karti hai.
+
+Woh aapko kabhi hurt nahi karna chahti.
+
+<br><br>
+
+Aap uski taqat hain,
+
+uska garv hain,
+
+aur uski zindagi ke sabse khaas insaan hain.
+
+<br><br>
+
+Bhagwan se bas yahi dua hai ki
+
+aap hamesha khush rahein,
+
+swasth rahein,
+
+aur aapki muskaan kabhi kam na ho.
+
+<br><br>
+
+❤️ Best Papa In The World ❤️
+
+<br><br>
+
+Made With Love 🌹
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function unlock(){
+
+let p=document.getElementById("pass").value;
+
+if(p=="father123"){
+
+showPage(2);
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML=
+
+"Wrong Password";
+
+}
+
+}
+
+
+function showPage(n){
+
+let pages=document.querySelectorAll(".page");
+
+pages.forEach(x=>x.classList.remove("active"));
+
+document.getElementById("page"+n)
+
+.classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
